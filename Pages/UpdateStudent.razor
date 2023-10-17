@@ -1,0 +1,176 @@
+﻿@page "/updatestudent"
+@using BlazorUI.Models
+@using System.Net.Http.Json
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
+
+<h3>Update Student</h3>
+
+<div class="form-group">
+    <label for="studentIdInput">Enter Student ID</label>
+    <input type="text" class="form-control" @bind="student.StudentId" />
+</div>
+
+<button class="btn btn-primary" @onclick="GetStudent">Get Student</button>
+
+@if (student != null)
+{
+    <form>
+        <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" class="form-control" id="studentId" @bind="student.StudentId" disabled />
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="text" class="form-control" id="gender" @bind="student.Gender" />
+        </div>
+        <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" class="form-control" @bind="student.Nationality" />
+        </div>
+
+        <div class="form-group">
+            <label for="placeOfBirth">Place of Birth:</label>
+            <input type="text" id="placeOfBirth" class="form-control" @bind="student.PlaceOfBirth" />
+        </div>
+
+        <div class="form-group">
+            <label for="stageId">Stage ID:</label>
+            <input type="text" id="stageId" class="form-control" @bind="student.StageId" />
+        </div>
+
+        <div class="form-group">
+            <label for="gradeId">Grade ID:</label>
+            <input type="text" id="gradeId" class="form-control" @bind="student.GradeId" />
+        </div>
+
+        <div class="form-group">
+            <label for="sectionId">Section ID:</label>
+            <input type="text" id="sectionId" class="form-control" @bind="student.SectionId" />
+        </div>
+
+        <div class="form-group">
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" class="form-control" @bind="student.Topic" />
+        </div>
+
+        <div class="form-group">
+            <label for="semester">Semester:</label>
+            <input type="text" id="semester" class="form-control" @bind="student.Semester" />
+        </div>
+
+        <div class="form-group">
+            <label for="relation">Relation:</label>
+            <input type="text" id="relation" class="form-control" @bind="student.Relation" />
+        </div>
+
+        <div class="form-group">
+            <label for="raisedHands">Raised Hands:</label>
+            <input type="number" id="raisedHands" class="form-control" @bind="student.RaisedHands" />
+        </div>
+
+        <div class="form-group">
+            <label for="visitedResources">Visited Resources:</label>
+            <input type="number" id="visitedResources" class="form-control" @bind="student.VisitedResources" />
+        </div>
+
+        <div class="form-group">
+            <label for="announcementsView">Announcements View:</label>
+            <input type="number" id="announcementsView" class="form-control" @bind="student.AnnouncementsView" />
+        </div>
+
+        <div class="form-group">
+            <label for="discussion">Discussion:</label>
+            <input type="number" id="discussion" class="form-control" @bind="student.Discussion" />
+        </div>
+
+        <div class="form-group">
+            <label for="parentAnsweringSurvey">Parent Answering Survey:</label>
+            <input type="text" id="parentAnsweringSurvey" class="form-control" @bind="student.ParentAnsweringSurvey" />
+        </div>
+
+        <div class="form-group">
+            <label for="parentSchoolSatisfaction">Parent School Satisfaction:</label>
+            <input type="text" id="parentSchoolSatisfaction" class="form-control" @bind="student.ParentSchoolSatisfaction" />
+        </div>
+
+        <div class="form-group">
+            <label for="studentAbsenceDays">Student Absence Days:</label>
+            <input type="text" id="studentAbsenceDays" class="form-control" @bind="student.StudentAbsenceDays" />
+        </div>
+
+        <div class="form-group">
+            <label for="studentMarks">Student Marks:</label>
+            <input type="number" id="studentMarks" class="form-control" @bind="student.StudentMarks" />
+        </div>
+
+        <div class="form-group">
+            <label for="class">Class:</label>
+            <input type="text" id="class" class="form-control" @bind="student.Class" />
+        </div>
+
+        <button class="btn btn-primary" @onclick="UpdateStudentAsync">Update</button>
+        <button class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+    </form>
+}
+else if (isStudentNotFound)
+{
+    <p>Student not found.</p>
+}
+
+@code {
+    private Student student = new Student();
+    private bool isStudentNotFound = false;
+
+    private async Task GetStudent()
+    {
+        isStudentNotFound = false;
+
+        if (!string.IsNullOrEmpty(student.StudentId))
+        {
+            try
+            {
+                student = await HttpClient.GetFromJsonAsync<Student>($"https://localhost:7124/api/StudentApi/{student.StudentId}");
+                if (student == null)
+                {
+                    isStudentNotFound = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception (e.g., log, show an error message)
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+    }
+
+    private async Task UpdateStudentAsync()
+    {
+        if (student != null)
+        {
+            try
+            {
+                var response = await HttpClient.PutAsJsonAsync($"https://localhost:7124/api/StudentApi/{student.StudentId}", student);
+                if (response.IsSuccessStatusCode)
+                {
+                    NavigationManager.NavigateTo("/fetchstudents");
+                }
+                else
+                {
+                    // Handle the update error
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception (e.g., log, show an error message)
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/fetchstudents");
+    }
+}
+
