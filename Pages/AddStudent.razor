@@ -1,0 +1,127 @@
+﻿@page "/addstudent"
+@using BlazorUI.Models
+
+<h3>Add Student</h3>
+
+<form>
+    <div class="form-group">
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" class="form-control" @bind="student.StudentId" />
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" class="form-control" @bind="student.Gender" />
+    </div>
+
+    <div class="form-group">
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" class="form-control" @bind="student.Nationality" />
+    </div>
+
+    <div class="form-group">
+        <label for="placeOfBirth">Place of Birth:</label>
+        <input type="text" id="placeOfBirth" class="form-control" @bind="student.PlaceOfBirth" />
+    </div>
+
+    <div class="form-group">
+        <label for="stageId">Stage ID:</label>
+        <input type="text" id="stageId" class="form-control" @bind="student.StageId" />
+    </div>
+
+    <div class="form-group">
+        <label for="gradeId">Grade ID:</label>
+        <input type="text" id="gradeId" class="form-control" @bind="student.GradeId" />
+    </div>
+
+    <div class="form-group">
+        <label for="sectionId">Section ID:</label>
+        <input type="text" id="sectionId" class="form-control" @bind="student.SectionId" />
+    </div>
+
+    <div class="form-group">
+        <label for="topic">Topic:</label>
+        <input type="text" id="topic" class="form-control" @bind="student.Topic" />
+    </div>
+
+    <div class="form-group">
+        <label for="semester">Semester:</label>
+        <input type="text" id="semester" class="form-control" @bind="student.Semester" />
+    </div>
+
+    <div class="form-group">
+        <label for="relation">Relation:</label>
+        <input type="text" id="relation" class="form-control" @bind="student.Relation" />
+    </div>
+
+    <div class="form-group">
+        <label for="raisedHands">Raised Hands:</label>
+        <input type="number" id="raisedHands" class="form-control" @bind="student.RaisedHands" />
+    </div>
+
+    <div class="form-group">
+        <label for="visitedResources">Visited Resources:</label>
+        <input type="number" id="visitedResources" class="form-control" @bind="student.VisitedResources" />
+    </div>
+
+    <div class="form-group">
+        <label for="announcementsView">Announcements View:</label>
+        <input type="number" id="announcementsView" class="form-control" @bind="student.AnnouncementsView" />
+    </div>
+
+    <div class="form-group">
+        <label for="discussion">Discussion:</label>
+        <input type="number" id="discussion" class="form-control" @bind="student.Discussion" />
+    </div>
+
+    <div class="form-group">
+        <label for="parentAnsweringSurvey">Parent Answering Survey:</label>
+        <input type="text" id="parentAnsweringSurvey" class="form-control" @bind="student.ParentAnsweringSurvey" />
+    </div>
+
+    <div class="form-group">
+        <label for="parentSchoolSatisfaction">Parent School Satisfaction:</label>
+        <input type="text" id="parentSchoolSatisfaction" class="form-control" @bind="student.ParentSchoolSatisfaction" />
+    </div>
+
+    <div class="form-group">
+        <label for="studentAbsenceDays">Student Absence Days:</label>
+        <input type="text" id="studentAbsenceDays" class="form-control" @bind="student.StudentAbsenceDays" />
+    </div>
+
+    <div class="form-group">
+        <label for="studentMarks">Student Marks:</label>
+        <input type="number" id="studentMarks" class="form-control" @bind="student.StudentMarks" />
+    </div>
+
+    <div class="form-group">
+        <label for="class">Class:</label>
+        <input type="text" id="class" class="form-control" @bind="student.Class" />
+    </div>
+
+    <button class="btn btn-primary" @onclick="async () => await AddStudentAsync()">Add Student</button>
+
+
+</form>
+
+@code {
+    private Student student = new Student();
+
+    private async Task AddStudentAsync()
+    {
+        var httpClient = new HttpClient();
+        var response = await httpClient.PostAsJsonAsync("https://localhost:7124/api/StudentApi", student);
+
+        if (response.IsSuccessStatusCode)
+        {
+            // Handle success, e.g., show a success message or navigate to a different page
+        }
+        else
+        {
+            // Handle error, e.g., show an error message
+        }
+    }
+
+}
+
+
