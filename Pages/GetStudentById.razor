@@ -1,0 +1,76 @@
+﻿@page "/getstudentbyid"
+@using BlazorUI.Models;
+@inject HttpClient httpClient
+
+
+<h3>Get Student by ID</h3>
+
+
+<p>Enter the Student ID you want to retrieve:</p>
+
+<input type="text" @bind="studentId" />
+<button class="btn btn-primary" @onclick="GetStudent">Retrieve</button>
+
+@if (student != null)
+{
+    <h4>Student Details:</h4>
+    <p><strong>Student ID:</strong> @student.StudentId</p>
+    <p><strong>Gender:</strong> @student.Gender</p>
+    <p><strong>NationalIty:</strong> student.Nationality</p>
+    <p><strong>PlaceofBirth:</strong> @student.PlaceOfBirth</p>
+    <p><strong>StageId:</strong> @student.StageId</p>
+    <p><strong>GradeId:</strong> @student.GradeId</p>
+    <p><strong>SectionId:</strong> @student.SectionId</p>
+    <p><strong>Semester:</strong> @student.Semester</p>
+    <p><strong>Relation:</strong> @student.Relation</p>
+    <p><strong>RaisedHands:</strong> @student.RaisedHands</p>
+    <p><strong>VisitedResources:</strong> @student.VisitedResources</p>
+    <p><strong>AnnouncementsView:</strong> @student.AnnouncementsView</p>
+    <p><strong>Discussion:</strong> @student.Discussion</p>
+    <p><strong>ParentAnsweringSurvey:</strong> @student.ParentAnsweringSurvey</p>
+    <p><strong>ParentSchoolSatisfaction:</strong> @student.ParentSchoolSatisfaction</p>
+    <p><strong>StudentAbsenceDays:</strong> @student.StudentAbsenceDays</p>
+    <p><strong>StudentMarks:</strong> @student.StudentMarks</p>
+    <p><strong>Class:</strong> @student.Class</p>
+
+}
+else
+{
+    <p>Student not found.</p>
+}
+
+@code {
+    private string studentId;
+    private Student student;
+
+    private async Task GetStudent()
+    {
+        // Create a variable to hold the student data
+        Student studentData = null;
+
+        // Check if the studentId is not empty
+        if (!string.IsNullOrEmpty(studentId))
+        {
+            try
+            {
+                
+                var response = await httpClient.GetAsync($"https://localhost:7124/api/StudentApi/{studentId}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                   
+                    studentData = await response.Content.ReadFromJsonAsync<Student>();
+                }
+            }
+            catch (Exception ex)
+            {
+               
+            }
+        }
+
+        // Set the student variable to the retrieved data or null if not found
+        student = studentData;
+    }
+}
+
+

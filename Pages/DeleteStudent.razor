@@ -1,0 +1,52 @@
+﻿@page "/deletestudent"
+@inject HttpClient httpClient
+
+<h3>Delete Student</h3>
+
+<p>Enter the Student ID you want to delete:</p>
+
+<input type="text" @bind="studentId" />
+<button class="btn btn-danger" @onclick="DeleteStudentAsync">Delete</button>
+
+@if (isDeleted)
+{
+    <p>Student with ID @deletedStudentId has been deleted.</p>
+}
+
+@code {
+    private string studentId;
+    private bool isDeleted = false;
+    private string deletedStudentId = "";
+
+    private async Task DeleteStudentAsync()
+    {
+        // private async Task DeleteStudentAsync()
+        // {
+        //     if (Id != null)
+        //     {
+        //         var response = await httpClient.DeleteAsync($"https://localhost:7124/api/StudentApi/{Id}");
+        //         if (response.IsSuccessStatusCode)
+        //         {
+        //             navigationManager.NavigateTo("/fetchstudents");
+        //         }
+        //         else
+        //         {
+        //             // Handle the error, e.g., display an error message
+        //         }
+        //     }
+        // }
+        // Perform the delete operation using the studentId
+        // You can use httpClient.DeleteAsync similar to the DeleteStudentAsync method
+
+        
+        var response = await httpClient.DeleteAsync($"https://localhost:7124/api/StudentApi/{studentId}");
+        if (response.IsSuccessStatusCode)
+        {
+            isDeleted = true;
+            deletedStudentId = studentId;
+        }
+    }
+}
+
+
+
