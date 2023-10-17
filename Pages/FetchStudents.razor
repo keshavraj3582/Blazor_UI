@@ -1,0 +1,87 @@
+﻿@page "/fetchstudents"
+@using BlazorUI.Models;
+@inject HttpClient httpClient
+<h3>Student Data</h3>
+
+@if (students == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>StudentId</th>
+                <th>Gender</th>
+                <th>NationalIty</th>
+                <th>PlaceofBirth</th>
+                <th>StageId</th>
+                <th>GradeId</th>
+                <th>SectionId</th>
+                <th>Topic</th>
+                <th>Semester</th>
+                <th>Relation</th>
+                <th>Raisedhands</th>
+                <th>VisItedResources</th>
+                <th>AnnouncementsView</th>
+                <th>Discussion</th>
+                <th>ParentAnsweringSurvey</th>
+                <th>ParentschoolSatisfaction</th>
+                <th>StudentAbsenceDays</th>
+                <th>StudentMarks</th>
+                <th>Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in students)
+            {
+                <tr>
+                    <td>@student.StudentId</td>
+                    <td>@student.Gender</td>
+                    <td>@student.Nationality</td>
+                    <td>@student.PlaceOfBirth</td>
+                    <td>@student.StageId</td>
+                    <td>@student.GradeId</td>
+                    <td>@student.SectionId</td>
+                    <td>@student.Topic</td>
+                    <td>@student.Semester</td>
+                    <td>@student.Relation</td>
+                    <td>@student.RaisedHands</td>
+                    <td>@student.VisitedResources</td>
+                    <td>@student.AnnouncementsView</td>
+                    <td>@student.Discussion</td>
+                    <td>@student.ParentAnsweringSurvey</td>
+                    <td>@student.ParentSchoolSatisfaction</td>
+                    <td>@student.StudentAbsenceDays</td>
+                    <td>@student.StudentMarks</td>
+                    <td>@student.Class</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Student> students;
+
+    protected override async Task OnInitializedAsync()
+    {
+        students = await FetchStudentDataFromApi();
+    }
+
+    private async Task<List<Student>> FetchStudentDataFromApi()
+    {
+        try
+        {
+            var response = await httpClient.GetFromJsonAsync<List<Student>>("https://localhost:7124/api/StudentApi");
+            return response;
+        }
+        catch (Exception ex)
+        {
+            // Handle error, e.g., log or display an error message
+            return null;
+        }
+    }
+}
+
