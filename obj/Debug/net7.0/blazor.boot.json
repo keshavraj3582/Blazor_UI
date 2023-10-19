@@ -7,6 +7,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Blazored.Toast.dll": "sha256-6wGoA8FmxkQCTFIXEM+U+Y2kJJnSTJXRYwuByAUPWGU=",
       "BlazorInputFile.dll": "sha256-C0KrMmLQQE68cd1+FNwIOW89nNGbOH48hRxQAoSBaaA=",
       "CsvHelper.dll": "sha256-oh395MqwHOdv87ggl0L2cpWEDZZGFYe3CVUXnzSo8rY=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-+79HPC+snrhJjzOJbwBnWtkWOY6jdopnEnle7ZiRr7Y=",
@@ -203,13 +204,13 @@
       "mscorlib.dll": "sha256-X+o60j6cZnlI2vFFjdH81yYTAxx13\/wqnNSWTKbDsyw=",
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
-      "BlazorUI.dll": "sha256-S6we6RdG5o820hmwjMe\/Lfd2LCgXpPZ7au5dbEV1Vds="
+      "BlazorUI.dll": "sha256-b0CZXwP7V2shvuVNfWW4xXVNARtnWpzxymIqA\/tmncA="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "BlazorUI.pdb": "sha256-BlQyaDJudp4lPmFlZIEJffO7aaD0s7uyZ+WtEtxqZgc="
+      "BlazorUI.pdb": "sha256-5Jzp5wkqwZv5au3pPFtFAGdkH9wP3Jf85scFTOpZBKo="
     },
     "runtime": {
       "dotnet.7.0.11.44kpfsuh7n.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",

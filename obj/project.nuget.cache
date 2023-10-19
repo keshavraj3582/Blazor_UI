@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "02/G4PM92agBy7z2ItkafmSJfVTWT+jyYpQRcidInCzOrXemqcU1DfWbjRNIl9XOhmKPLZvyOfFCcm3lzf3lHw==",
+  "dgSpecHash": "J3Xogj/EBBjGKmBlOtzMsNA3k/wIq6A+GXWeeAcOrnIsdc1Ob0Ij0E8uyokfSF3bvUvHIc9RTmuSLtxmkyyNLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\BlazorUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\blazored.toast\\4.1.0\\blazored.toast.4.1.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.11\\microsoft.aspnetcore.authorization.7.0.11.nupkg.sha512",

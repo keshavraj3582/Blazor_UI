@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[0.2.0, )"
             },
+            "Blazored.Toast": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "CsvHelper": {
               "target": "Package",
               "version": "[30.0.1, )"

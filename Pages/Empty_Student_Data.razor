@@ -1,0 +1,30 @@
+﻿@page "/truncate-database"
+@using Blazored.Toast.Configuration;
+@using Blazored.Toast.Services;
+@inject HttpClient httpClient
+@inject IToastService toastService
+
+<h3>Truncate Database</h3>
+
+<p>This will delete all records from the database. Are you sure you want to proceed?</p>
+
+<button class="btn btn-danger" @onclick="TruncateDatabase">Truncate Database</button>
+
+@code {
+
+    private async Task TruncateDatabase()
+    {
+        var response = await httpClient.DeleteAsync("https://localhost:7078/api/Student/database");
+
+        if (response.IsSuccessStatusCode)
+        {
+            toastService.ShowSuccess("Database truncated successfully");
+        }
+        else
+        {
+            toastService.ShowError("Error truncating the database");
+        }
+
+    }
+}
+

@@ -1,0 +1,35 @@
+﻿@page "/download"
+@inject IJSRuntime JSRuntime
+
+<h3>Download Students as Excel</h3>
+
+<button class="btn btn-primary" @onclick="DownloadExcel">Download Excel</button>
+
+@code {
+    private async Task DownloadExcel()
+    {
+        // Define the API endpoint URL
+        var apiUrl = "https://localhost:7078/api/Student/export"; // Adjust the URL as needed
+
+        // Create a HttpClient
+        using (var httpClient = new HttpClient())
+        {
+            // Make a GET request to the API endpoint
+            var response = await httpClient.GetAsync(apiUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsByteArrayAsync();
+                await JSRuntime.InvokeVoidAsync("downloadFile", "students.xlsx", content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+            }
+            else
+            {
+                // Handle the error, e.g., display an error message
+            }
+        }
+    }
+}
+
+
+
+
