@@ -98,6 +98,7 @@
         <label for="class">Class:</label>
         <input type="text" id="class" class="form-control" @bind="student.Class" />
     </div>
+   
 
 
     <button class="btn btn-primary" @onclick="async () => await AddStudentAsync()">Add Student</button>
@@ -108,18 +109,19 @@
 @code {
     private Student student = new Student();
 
+
     private async Task AddStudentAsync()
     {
         var httpClient = new HttpClient();
-        var response = await httpClient.PostAsJsonAsync("https://localhost:7124/api/StudentApi", student);
+        var response = await httpClient.PostAsJsonAsync("https://localhost:7078/api/Student/CreateStudent", student);
 
         if (response.IsSuccessStatusCode)
         {
-            // Handle success, e.g., show a success message or navigate to a different page
+            
         }
         else
         {
-            // Handle error, e.g., show an error message
+            
         }
     }
 

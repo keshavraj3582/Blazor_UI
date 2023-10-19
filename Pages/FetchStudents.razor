@@ -9,8 +9,9 @@
 }
 else
 {
-    <table class="table">
-        <thead>
+    <table class="grid-container">
+        <thead class="grid-header">
+            <link rel="stylesheet" href="/css/styles.css">
             <tr>
                 <th>StudentId</th>
                 <th>Gender</th>
@@ -74,7 +75,7 @@ else
     {
         try
         {
-            var response = await httpClient.GetFromJsonAsync<List<Student>>("https://localhost:7124/api/StudentApi");
+            var response = await httpClient.GetFromJsonAsync<List<Student>>("https://localhost:7078/api/Student/GetAllStudents");
             return response;
         }
         catch (Exception ex)

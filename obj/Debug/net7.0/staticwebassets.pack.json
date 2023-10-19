@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
+      "Id": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
@@ -71,10 +75,6 @@
     {
       "Id": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
-    },
-    {
-      "Id": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\wwwroot\\sample-data\\weather.json",
-      "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorUI.Microsoft.AspNetCore.StaticWebAssets.props",

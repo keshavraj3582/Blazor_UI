@@ -39,7 +39,7 @@
         // You can use httpClient.DeleteAsync similar to the DeleteStudentAsync method
 
         
-        var response = await httpClient.DeleteAsync($"https://localhost:7124/api/StudentApi/{studentId}");
+        var response = await httpClient.DeleteAsync($"https://localhost:7078/api/Student/Delete/{studentId}");
         if (response.IsSuccessStatusCode)
         {
             isDeleted = true;

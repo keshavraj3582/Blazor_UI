@@ -54,7 +54,7 @@ else
             try
             {
                 
-                var response = await httpClient.GetAsync($"https://localhost:7124/api/StudentApi/{studentId}");
+                var response = await httpClient.GetAsync($"https://localhost:7078/api/Student/FindById?id={studentId}");
 
                 if (response.IsSuccessStatusCode)
                 {
