@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[0.2.0, )"
             },
+            "Blazored.Modal": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
             "Blazored.Toast": {
               "target": "Package",
               "version": "[4.1.0, )"

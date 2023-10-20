@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CT6EZpT87WlLYTpTxdA749O7E199lWP/Kmh51jGpzHM=",
+  "Hash": "7+ZK7uXnZ9o+tIQNUGlG2iWsFAm3nRx2MR+48oySDlY=",
   "Source": "BlazorUI",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\DELL\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\Blazored.Modal.bundle.scp.css",
+      "SourceId": "Blazored.Modal",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\DELL\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Modal",
+      "RelativePath": "Blazored.Modal.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\Blazored.Modal.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js",
+      "SourceId": "Blazored.Modal",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\DELL\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Modal",
+      "RelativePath": "BlazoredModal.razor.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\blazored.modal\\7.1.0\\staticwebassets\\BlazoredModal.razor.js"
+    },
     {
       "Identity": "C:\\Users\\DELL\\.nuget\\packages\\blazored.toast\\4.1.0\\staticwebassets\\Blazored.Toast.bundle.scp.css",
       "SourceId": "Blazored.Toast",
@@ -100,6 +134,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\7.0.11\\build\\net7.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Modal.dll",
+      "SourceId": "BlazorUI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Modal.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\blazored.modal\\7.1.0\\lib\\net6.0\\Blazored.Modal.dll"
     },
     {
       "Identity": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Toast.dll",
@@ -3823,6 +3874,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Drawing.dll"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\obj\\Debug\\net7.0\\build-gz\\1QXSG+ha.gz",
+      "SourceId": "BlazorUI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Modal.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Modal.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Blazored.Modal.dll"
     },
     {
       "Identity": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\obj\\Debug\\net7.0\\build-gz\\1sFuGulE.gz",

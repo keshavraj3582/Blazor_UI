@@ -10,7 +10,15 @@
 
 <button class="btn btn-danger" @onclick="TruncateDatabase">Truncate Database</button>
 
+@if (isDeleted)
+{
+    <p> @deletedStudentId.</p>
+}
+
 @code {
+    private string studentId="All records has been Deleted";
+    private bool isDeleted = false;
+    private string deletedStudentId = "";
 
     private async Task TruncateDatabase()
     {
@@ -18,11 +26,14 @@
 
         if (response.IsSuccessStatusCode)
         {
-            toastService.ShowSuccess("Database truncated successfully");
+            isDeleted = true;
+            deletedStudentId = studentId;
+            
         }
         else
         {
-            toastService.ShowError("Error truncating the database");
+            isDeleted = false;
+            deletedStudentId = "Error!";
         }
 
     }

@@ -105,8 +105,16 @@
 
 
 </form>
+@if (isSuccess)
+{
+    <p>Student @a ..</p>
+}
 
 @code {
+    string a = "";
+    string b;
+    bool isSuccess = false;
+           
     private Student student = new Student();
 
 
@@ -117,10 +125,14 @@
 
         if (response.IsSuccessStatusCode)
         {
+            isSuccess = true;
+            b = "Data Inserted Successfully";
+            a = b;
             
         }
         else
         {
+            a = "Error........";
             
         }
     }

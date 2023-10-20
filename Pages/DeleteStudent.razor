@@ -19,26 +19,7 @@
     private string deletedStudentId = "";
 
     private async Task DeleteStudentAsync()
-    {
-        // private async Task DeleteStudentAsync()
-        // {
-        //     if (Id != null)
-        //     {
-        //         var response = await httpClient.DeleteAsync($"https://localhost:7124/api/StudentApi/{Id}");
-        //         if (response.IsSuccessStatusCode)
-        //         {
-        //             navigationManager.NavigateTo("/fetchstudents");
-        //         }
-        //         else
-        //         {
-        //             // Handle the error, e.g., display an error message
-        //         }
-        //     }
-        // }
-        // Perform the delete operation using the studentId
-        // You can use httpClient.DeleteAsync similar to the DeleteStudentAsync method
-
-        
+    { 
         var response = await httpClient.DeleteAsync($"https://localhost:7078/api/Student/Delete/{studentId}");
         if (response.IsSuccessStatusCode)
         {
