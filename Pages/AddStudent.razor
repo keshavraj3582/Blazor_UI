@@ -1,12 +1,18 @@
 ﻿@page "/addstudent"
 @using BlazorUI.Models
+@using System.ComponentModel.DataAnnotations
+@using System.Net.Http
+@inject HttpClient HttpClient
 
 <h3>Add Student</h3>
 
-<form>
+<form @onsubmit="AddStudentAsync">
+
     <div class="form-group">
         <label for="studentId">Student ID:</label>
-        <input type="text" id="studentId" class="form-control" @bind="student.StudentId" />
+        <input type="text" id="studentId" class="form-control" @bind="student.StudentId" 
+        required onerror="This Field is Required" placeholder="Student Id (Required)"/>
+        
     </div>
 
     <div class="form-group">
@@ -99,42 +105,43 @@
         <input type="text" id="class" class="form-control" @bind="student.Class" />
     </div>
    
+    
 
-
-    <button class="btn btn-primary" @onclick="async () => await AddStudentAsync()">Add Student</button>
+    <button class="btn btn-primary" type="submit">Add Student</button>
 
 
 </form>
-@if (isSuccess)
+
+
+@if (!string.IsNullOrEmpty(postMessage))
 {
-    <p>Student @a ..</p>
+    <div class="alert alert-success mt-3">@postMessage</div>
 }
 
+
 @code {
-    string a = "";
-    string b;
-    bool isSuccess = false;
-           
+    
+    public string postMessage { get; set; }
+
+
     private Student student = new Student();
 
 
     private async Task AddStudentAsync()
     {
-        var httpClient = new HttpClient();
-        var response = await httpClient.PostAsJsonAsync("https://localhost:7078/api/Student/CreateStudent", student);
+       
+        
+        var response = await HttpClient.PostAsJsonAsync("https://localhost:7078/api/Student/CreateStudent", student);
 
         if (response.IsSuccessStatusCode)
         {
-            isSuccess = true;
-            b = "Data Inserted Successfully";
-            a = b;
-            
+            postMessage = "Student data posted successfully.";
         }
         else
         {
-            a = "Error........";
-            
+            postMessage = "Error posting student data. Status Code: " + response.StatusCode;
         }
+        
     }
 
 }

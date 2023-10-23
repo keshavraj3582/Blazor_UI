@@ -12,8 +12,12 @@
 {
     <p>Student with ID @deletedStudentId has been deleted.</p>
 }
+else
+{ 
+}
 
 @code {
+    
     private string studentId;
     private bool isDeleted = false;
     private string deletedStudentId = "";
@@ -25,6 +29,10 @@
         {
             isDeleted = true;
             deletedStudentId = studentId;
+        }
+        else
+        {
+            deletedStudentId = "Doesn't Exists Or ";
         }
     }
 }
