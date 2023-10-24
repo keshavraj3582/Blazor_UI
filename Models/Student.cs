@@ -1,7 +1,13 @@
-﻿namespace BlazorUI.Models
+﻿using CsvHelper.Configuration.Attributes;
+using System.ComponentModel.DataAnnotations;
+
+namespace BlazorUI.Models
 {
     public class Student
     {
+        [Name("StudentId")]
+        [Required(ErrorMessage = "Student ID is Required")]
+        [RegularExpression(@"^STDN\d{5}$", ErrorMessage = "Student ID should start with 'STDN' then 5 digits.")]
         public string StudentId { get; set; }
         public string? Gender { get; set; }
         public string? Nationality { get; set; }
