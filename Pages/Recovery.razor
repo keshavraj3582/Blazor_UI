@@ -1,0 +1,36 @@
+﻿@page "/recoverdata"
+@using BlazorUI.Models
+@using MatBlazor
+@inject HttpClient HttpClient
+
+<h3>Data Recovery</h3>
+
+<button class="btn btn-primary" @onclick="RecoverData">Recover Data</button>
+
+<p>@statusMessage</p>
+
+@code {
+    private string statusMessage;
+
+    private async Task RecoverData()
+    {
+        try
+        {
+            var response = await HttpClient.PostAsync("https://localhost:7078/api/RecoverData/Recovery", null);
+
+            if (response.IsSuccessStatusCode)
+            {
+                statusMessage = "Data recovered successfully.";
+            }
+            else
+            {
+                statusMessage = "Error recovering data. Status Code: " + response.StatusCode;
+            }
+        }
+        catch (Exception ex)
+        {
+            statusMessage = "An error occurred: " + ex.Message;
+        }
+    }
+}
+

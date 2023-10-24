@@ -28,6 +28,7 @@
         <div class="form-group">
             <label for="gender">Gender:</label>
             <input type="text" class="form-control" @bind="updatedStudent.Gender" placeholder="Enter Gender" required />
+            <ValidationMessage For="@(() => updatedStudent.Gender)" />
            
         </div>
 

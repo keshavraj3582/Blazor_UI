@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7+ZK7uXnZ9o+tIQNUGlG2iWsFAm3nRx2MR+48oySDlY=",
+  "Hash": "jjtl3ZnpLed1uoEjbyfwI9UILGOZnLvwSXNlAWjNqiw=",
   "Source": "BlazorUI",
   "BasePath": "/",
   "Mode": "Root",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\blazorinputfile\\0.2.0\\staticwebassets\\inputfile.js"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\.nuget\\packages\\matblazor\\2.10.0\\staticwebassets\\dist\\matBlazor.css",
+      "SourceId": "MatBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\DELL\\.nuget\\packages\\matblazor\\2.10.0\\staticwebassets\\",
+      "BasePath": "_content/MatBlazor",
+      "RelativePath": "dist/matBlazor.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\matblazor\\2.10.0\\staticwebassets\\dist\\matBlazor.css"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\.nuget\\packages\\matblazor\\2.10.0\\staticwebassets\\dist\\matBlazor.js",
+      "SourceId": "MatBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\DELL\\.nuget\\packages\\matblazor\\2.10.0\\staticwebassets\\",
+      "BasePath": "_content/MatBlazor",
+      "RelativePath": "dist/matBlazor.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\matblazor\\2.10.0\\staticwebassets\\dist\\matBlazor.js"
     },
     {
       "Identity": "C:\\Users\\DELL\\.nuget\\packages\\quick.aspnetcore.components.web.extensions\\6.0.2\\staticwebassets\\headManager.js",
@@ -355,6 +389,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.11\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MatBlazor.dll",
+      "SourceId": "BlazorUI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MatBlazor.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DELL\\.nuget\\packages\\matblazor\\2.10.0\\lib\\net6.0\\MatBlazor.dll"
     },
     {
       "Identity": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -4112,6 +4163,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Collections.dll"
+    },
+    {
+      "Identity": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\obj\\Debug\\net7.0\\build-gz\\5QM7GODt.gz",
+      "SourceId": "BlazorUI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/MatBlazor.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MatBlazor.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\MatBlazor.dll"
     },
     {
       "Identity": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\obj\\Debug\\net7.0\\build-gz\\6+M5DFwd.gz",

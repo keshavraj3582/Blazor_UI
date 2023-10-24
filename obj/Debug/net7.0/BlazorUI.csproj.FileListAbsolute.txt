@@ -854,3 +854,7 @@ C:\Users\DELL\OneDrive - Odin Education Foundation\Desktop\demo_project\BlazorUI
 C:\Users\DELL\OneDrive - Odin Education Foundation\Desktop\demo_project\BlazorUI\bin\Debug\net7.0\wwwroot\_framework\Blazored.Modal.dll.gz
 C:\Users\DELL\OneDrive - Odin Education Foundation\Desktop\demo_project\BlazorUI\bin\Debug\net7.0\Blazored.Modal.dll
 C:\Users\DELL\OneDrive - Odin Education Foundation\Desktop\demo_project\BlazorUI\obj\Debug\net7.0\build-gz\1QXSG+ha.gz
+C:\Users\DELL\OneDrive - Odin Education Foundation\Desktop\demo_project\BlazorUI\bin\Debug\net7.0\wwwroot\_framework\MatBlazor.dll
+C:\Users\DELL\OneDrive - Odin Education Foundation\Desktop\demo_project\BlazorUI\bin\Debug\net7.0\wwwroot\_framework\MatBlazor.dll.gz
+C:\Users\DELL\OneDrive - Odin Education Foundation\Desktop\demo_project\BlazorUI\bin\Debug\net7.0\MatBlazor.dll
+C:\Users\DELL\OneDrive - Odin Education Foundation\Desktop\demo_project\BlazorUI\obj\Debug\net7.0\build-gz\5QM7GODt.gz

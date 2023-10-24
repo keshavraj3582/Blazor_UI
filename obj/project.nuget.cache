@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nlhzTt7FAd1RPJsxjlQnox7fL2pqWbSSvU8GPNYmYHKEM79wvoIXrZCnZccMqCZjhmrC3bIjXcNWZFH+E7Ge8w==",
+  "dgSpecHash": "smQE4XZTMYtjP3FAM9jFPfu9i/Aajy527eDthkv3crNnJI3wlFw3AqL2WvG9JgCJvwu2Cty+MSw2sp8xvC1fyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\OneDrive - Odin Education Foundation\\Desktop\\demo_project\\BlazorUI\\BlazorUI.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\blazored.toast\\4.1.0\\blazored.toast.4.1.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\matblazor\\2.10.0\\matblazor.2.10.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.11\\microsoft.aspnetcore.authorization.7.0.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.11\\microsoft.aspnetcore.components.7.0.11.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.11\\microsoft.aspnetcore.components.analyzers.7.0.11.nupkg.sha512",
