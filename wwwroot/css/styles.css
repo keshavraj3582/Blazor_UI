@@ -22,3 +22,7 @@
 .grid-row:nth-child(even) {
     background-color: grey; /* Alternate row background color */
 }
+.modal show, confirmation {
+    background-color: palegreen;
+    font-size:59px;
+}

@@ -20,7 +20,7 @@ namespace BlazorUI.Models
         public string? Nationality { get; set; }
         [CustomPlaceOfBirthValidation(ErrorMessage = "PlaceOfBirth must only contain Alphabets and White Space.")]
         public string? PlaceOfBirth { get; set; }
-        [CustomStageIDValidation(ErrorMessage = "StageID must be 'loverlevel' or 'MiddleSchool' or 'HighSchool'.")]
+        [CustomStageIDValidation(ErrorMessage = "StageID must be 'lowerlevel' or 'MiddleSchool' or 'HighSchool'.")]
         public string? StageId { get; set; }
         [CustomGradeIDValidation(ErrorMessage = "GradeID must be G-00 format.")]
         public string? GradeId { get; set; }

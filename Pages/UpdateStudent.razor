@@ -21,14 +21,17 @@
 {
     <EditForm Model="@updatedStudent" OnValidSubmit="UpdateStudents">
         <DataAnnotationsValidator/>
+        <ValidationSummary />
         <div class="form-group">
             <label for="studentId">Student ID:</label>
             <input type="text" class="form-control" id="studentId" @bind="updatedStudent.StudentId" placeholder="Enter Student_ID" disabled />
+            <ValidationMessage For="@(() => updatedStudent.StudentId)" />
         </div>
         <div class="form-group">
             <label for="gender">Gender:</label>
             <input type="text" class="form-control" @bind="updatedStudent.Gender" placeholder="Enter Gender" required />
             <ValidationMessage For="@(() => updatedStudent.Gender)" />
+           
            
         </div>
 
@@ -36,6 +39,7 @@
             <label for="Nationlity">Nationlity</label>
             <input type="text" name="Nationlity" class="form-control" id="Nationlity" @bind="updatedStudent.Nationality"
                    placeholder="Enter Nationlity" required />
+            <ValidationMessage For="@(() => updatedStudent.Nationality)" />
           
         </div>
 
@@ -43,17 +47,20 @@
             <label for="PlaceOfBirth">PlaceOfBirth</label>
             <input type="text" name="PlaceOfBirth" class="form-control" id="PlaceOfBirth" @bind="updatedStudent.PlaceOfBirth"
                    placeholder="Enter PlaceOfBirth" required />
+            <ValidationMessage For="@(() => updatedStudent.PlaceOfBirth)" />
            
         </div>
 
         <div class="form-group">
             <label for="StageId">StageId</label>
             <input type="text" name="StageId" class="form-control" id="StageId" @bind="updatedStudent.StageId" placeholder="Enter StageId" required />
+            <ValidationMessage For="@(() => updatedStudent.StageId)" />
            
         </div>
         <div class="form-group">
             <label for="GradeId">GradeId</label>
             <input required type="text" name="GradeId" class="form-control" id="GradeId" @bind="updatedStudent.GradeId" placeholder="Enter GradeId" />
+            <ValidationMessage For="@(() => updatedStudent.GradeId)" />
     
         </div>
 
@@ -61,18 +68,21 @@
             <label for="SectionId">SectionId</label>
             <input required type="text" name="SectionId" class="form-control" id="SectionId" @bind="updatedStudent.SectionId"
                    placeholder="Enter SectionId" />
+            <ValidationMessage For="@(() => updatedStudent.SectionId)" />
             
         </div>
 
         <div class="form-group">
             <label for="Topic">Topic</label>
             <input required type="text" name="Topic" class="form-control" id="Topic" @bind="updatedStudent.Topic" placeholder="Enter Topic" />
+            <ValidationMessage For="@(() => updatedStudent.Topic)" />
            
         </div>
         <div class="form-group">
             <label for="Semester">Semester </label>
             <input required type="text" name="Semester" class="form-control" id="Semester" @bind="updatedStudent.Semester"
                    placeholder="Enter Semester" />
+            <ValidationMessage For="@(() => updatedStudent.Semester)" />
            
         </div>
 
@@ -80,6 +90,7 @@
             <label for="Relation">Relation</label>
             <input required type="text" name="Relation" class="form-control" id="Relation" @bind="updatedStudent.Relation"
                    placeholder="Enter Relation" />
+            <ValidationMessage For="@(() => updatedStudent.Relation)" />
             
         </div>
 
@@ -87,6 +98,7 @@
             <label for="RaisedHands">RaisedHands</label>
             <input required type="text" name="RaisedHands" class="form-control" id="RaisedHands" @bind="updatedStudent.RaisedHands"
                    placeholder="Enter RaisedHands" />
+            <ValidationMessage For="@(() => updatedStudent.RaisedHands)" />
            
         </div>
 
@@ -94,6 +106,7 @@
             <label for="VisitedResources">VisitedResources</label>
             <input required type="text" name="VisitedResources" class="form-control" id="VisitedResources" @bind="updatedStudent.VisitedResources"
                    placeholder="Enter VisitedResources" />
+            <ValidationMessage For="@(() => updatedStudent.VisitedResources)" />
           
         </div>
 
@@ -101,6 +114,7 @@
             <label for="AnnouncementsView">AnnouncementsView</label>
             <input required type="text" name="AnnouncementsView" class="form-control" id="AnnouncementsView" @bind="updatedStudent.AnnouncementsView"
                    placeholder="Enter AnnouncementsView" />
+            <ValidationMessage For="@(() => updatedStudent.AnnouncementsView)" />
           
         </div>
 
@@ -108,6 +122,7 @@
             <label for="Discussion ">Discussion</label>
             <input required type="text" name="Discussion" class="form-control" id="Discussion" @bind="updatedStudent.Discussion"
                    placeholder="Enter Discussion" />
+            <ValidationMessage For="@(() => updatedStudent.Discussion)" />
            
         </div>
 
@@ -115,13 +130,15 @@
             <label for="ParentAnsweringSurvey">ParentAnsweringSurvey</label>
             <input required type="text" name="ParentAnsweringSurvey" class="form-control" id="ParentAnsweringSurvey" @bind="updatedStudent.ParentAnsweringSurvey"
                    placeholder="Enter ParentAnsweringSurvey" />
+            <ValidationMessage For="@(() => updatedStudent.ParentAnsweringSurvey)" />
            
         </div>
 
         <div class="form-group">
             <label for="ParentschoolSatisfaction">ParentschoolSatisfaction</label>
             <input required type="text" name="ParentschoolSatisfaction" class="form-control"
-                   id="ParentschoolSatisfaction" @bind="updatedStudent.ParentAnsweringSurvey" placeholder="Enter ParentschoolSatisfaction" />
+                   id="ParentschoolSatisfaction" @bind="updatedStudent.ParentSchoolSatisfaction" placeholder="Enter ParentschoolSatisfaction" />
+            <ValidationMessage For="@(() => updatedStudent.ParentSchoolSatisfaction)" />
            
         </div>
 
@@ -129,6 +146,7 @@
             <label for="StudentAbsenceDays ">StudentAbsenceDays </label>
             <input required type="text" name="StudentAbsenceDays" class="form-control" id="StudentAbsenceDays" @bind="updatedStudent.StudentAbsenceDays"
                    placeholder="Enter StudentAbsenceDays" />
+            <ValidationMessage For="@(() => updatedStudent.StudentAbsenceDays)" />
             
         </div>
 
@@ -136,12 +154,14 @@
             <label for="StudentMarks ">StudentMarks </label>
             <input required type="text" name="StudentMarks" class="form-control" id="StudentMarks" @bind="updatedStudent.StudentMarks"
                    placeholder="Enter StudentMarks" />
+            <ValidationMessage For="@(() => updatedStudent.StudentMarks)" />
           
         </div>
 
         <div class="form-group">
             <label for="Classes">Classes</label>
             <input type="text" name="Classes" class="form-control" id="Classes" @bind="updatedStudent.Class" placeholder="Enter Classes" />
+            <ValidationMessage For="@(() => updatedStudent.Class)" />
          
         </div>
 
@@ -173,6 +193,63 @@ else if (showErrorMessage)
 
     private async Task CheckStudentId()
     {
+        if (string.IsNullOrWhiteSpace(updatedStudent.Gender))
+        {
+            updatedStudent.Gender = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.Nationality))
+        {
+            updatedStudent.Nationality = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.PlaceOfBirth))
+        {
+            updatedStudent.PlaceOfBirth = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.StageId))
+        {
+            updatedStudent.StageId = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.GradeId))
+        {
+            updatedStudent.GradeId = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.SectionId))
+        {
+            updatedStudent.SectionId = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.Topic))
+        {
+            updatedStudent.Topic = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.Semester))
+        {
+            updatedStudent.Semester = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.Relation))
+        {
+            updatedStudent.Relation = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.ParentAnsweringSurvey))
+        {
+            updatedStudent.ParentAnsweringSurvey = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.ParentSchoolSatisfaction))
+        {
+            updatedStudent.ParentSchoolSatisfaction = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.StudentAbsenceDays))
+        {
+            updatedStudent.StudentAbsenceDays = null;
+        }
+
+        if (updatedStudent.StudentMarks == null)
+        {
+            updatedStudent.StudentMarks = null;
+        }
+        if (string.IsNullOrWhiteSpace(updatedStudent.Class))
+        {
+            updatedStudent.Class = null;
+        }
         // Assume GetStudentFromApi is a method that fetches student data from your API
         var student = await GetStudentFromApi(studentId);
 

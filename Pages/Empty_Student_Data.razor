@@ -8,7 +8,15 @@
 
 <p>This will delete all records from the database. Are you sure you want to proceed?</p>
 
-<button class="btn btn-danger" @onclick="TruncateDatabase">Truncate Database</button>
+<button class="btn btn-danger" @onclick="ShowDeleteConfirmationModal">Truncate Database</button>
+
+<CustomModal @bind-IsVisible="isModalVisible" Title="Delete Confirmation">
+    <div class="confirmation">
+        Are you sure you want to delete the student with ID @studentId?
+    </div>
+    <button class="btn btn-danger" @onclick="TruncateDatabase">Yes</button>
+    <button class="btn btn-primary" @onclick="CloseDeleteConfirmationModal">No</button>
+</CustomModal>
 
 @if (isDeleted)
 {
@@ -19,6 +27,17 @@
     private string studentId="All records has been Deleted";
     private bool isDeleted = false;
     private string deletedStudentId = "";
+    private bool isModalVisible = false;
+
+    private async Task ShowDeleteConfirmationModal()
+    {
+        isModalVisible = true;
+    }
+
+    private async Task CloseDeleteConfirmationModal()
+    {
+        isModalVisible = false;
+    }
 
     private async Task TruncateDatabase()
     {
@@ -28,7 +47,8 @@
         {
             isDeleted = true;
             deletedStudentId = studentId;
-            
+            isModalVisible = false;
+
         }
         else
         {

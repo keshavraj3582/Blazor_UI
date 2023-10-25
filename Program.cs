@@ -8,7 +8,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-//
+
 //https://localhost:7124/api/StudentApi
 builder.Services.AddBlazoredToast();
 builder.Services.AddBlazoredModal();

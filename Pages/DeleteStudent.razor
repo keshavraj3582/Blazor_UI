@@ -14,7 +14,7 @@
 }
 
 <CustomModal @bind-IsVisible="isModalVisible" Title="Delete Confirmation">
-    <div>
+    <div class="confirmation">
         Are you sure you want to delete the student with ID @studentId?
     </div>
     <button class="btn btn-danger" @onclick="DeleteStudentAsync">Yes</button>
