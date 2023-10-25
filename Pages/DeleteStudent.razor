@@ -6,36 +6,54 @@
 <p>Enter the Student ID you want to delete:</p>
 
 <input type="text" @bind="studentId" />
-<button class="btn btn-danger" @onclick="DeleteStudentAsync">Delete</button>
+<button class="btn btn-danger" @onclick="ShowDeleteConfirmationModal">Delete</button>
 
 @if (isDeleted)
 {
     <p>Student with ID @deletedStudentId has been deleted.</p>
 }
-else
-{ 
-}
+
+<CustomModal @bind-IsVisible="isModalVisible" Title="Delete Confirmation">
+    <div>
+        Are you sure you want to delete the student with ID @studentId?
+    </div>
+    <button class="btn btn-danger" @onclick="DeleteStudentAsync">Yes</button>
+    <button class="btn btn-primary" @onclick="CloseDeleteConfirmationModal">No</button>
+</CustomModal>
 
 @code {
-    
     private string studentId;
     private bool isDeleted = false;
     private string deletedStudentId = "";
+    private bool isModalVisible = false;
+
+    private async Task ShowDeleteConfirmationModal()
+    {
+        isModalVisible = true;
+    }
+
+    private async Task CloseDeleteConfirmationModal()
+    {
+        isModalVisible = false;
+    }
 
     private async Task DeleteStudentAsync()
-    { 
+    {
         var response = await httpClient.DeleteAsync($"https://localhost:7078/api/Student/Delete/{studentId}");
         if (response.IsSuccessStatusCode)
         {
             isDeleted = true;
             deletedStudentId = studentId;
+            isModalVisible = false; 
         }
         else
         {
-            deletedStudentId = "Doesn't Exists Or ";
+            deletedStudentId = "Doesn't Exist Or ";
         }
     }
 }
+
+
 
 
 
