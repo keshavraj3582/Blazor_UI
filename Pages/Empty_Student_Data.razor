@@ -3,6 +3,7 @@
 @using Blazored.Toast.Services;
 @inject HttpClient httpClient
 @inject IToastService toastService
+@inject IJSRuntime JSRuntime
 
 <h3>Truncate Database</h3>
 
@@ -17,6 +18,9 @@
     <button class="btn btn-danger" @onclick="TruncateDatabase">Yes</button>
     <button class="btn btn-primary" @onclick="CloseDeleteConfirmationModal">No</button>
 </CustomModal>
+
+
+
 
 @if (isDeleted)
 {
@@ -48,12 +52,14 @@
             isDeleted = true;
             deletedStudentId = studentId;
             isModalVisible = false;
+            await JSRuntime.InvokeVoidAsync("alert", "Database Truncated");
 
         }
         else
         {
             isDeleted = false;
             deletedStudentId = "Error!";
+            await JSRuntime.InvokeVoidAsync("alert", "No data");
         }
 
     }

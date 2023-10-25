@@ -1,5 +1,6 @@
 ﻿@page "/deletestudent"
 @inject HttpClient httpClient
+@inject IJSRuntime JSRuntime
 
 <h3>Delete Student</h3>
 
@@ -45,10 +46,12 @@
             isDeleted = true;
             deletedStudentId = studentId;
             isModalVisible = false; 
+            await JSRuntime.InvokeVoidAsync("alert", "Record Deleted");
         }
         else
         {
             deletedStudentId = "Doesn't Exist Or ";
+            await JSRuntime.InvokeVoidAsync("alert", "Invalid Entry");
         }
     }
 }
